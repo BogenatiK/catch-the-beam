@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Поймай луч</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-wrap">
+    <canvas id="game-canvas"></canvas>
+
+    <div id="hud">
+      <div class="hud-item">
+        <span class="hud-label">Поймано</span>
+        <span id="caught-count" class="hud-value">0</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">Пропущено</span>
+        <span id="missed-count" class="hud-value">0</span>
+      </div>
+    </div>
+
+    <div id="menu-screen" class="overlay">
+      <h1 class="title">Поймай луч</h1>
+      <p class="subtitle">Поворачивай солнечный парус и лови все лучи</p>
+      <div class="difficulty-buttons">
+        <button class="btn difficulty-btn" data-difficulty="easy">Лёгкий</button>
+        <button class="btn difficulty-btn" data-difficulty="medium">Средний</button>
+        <button class="btn difficulty-btn" data-difficulty="hard">Сложный</button>
+      </div>
+      <p class="hint">Управление: движение мыши или пальца по экрану</p>
+    </div>
+
+    <div id="result-screen" class="overlay hidden">
+      <h1 id="result-title" class="title">Результат</h1>
+      <p id="result-text" class="subtitle"></p>
+      <button id="restart-btn" class="btn">Заново</button>
+      <button id="menu-btn" class="btn btn-secondary">Выбрать сложность</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
